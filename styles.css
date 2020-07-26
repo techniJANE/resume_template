@@ -141,3 +141,9 @@ a.button:hover {
     white-space: pre;
   }
 }
+
+@supports not (scroll-behavior: smooth) {
+  a.button {
+    display: none;
+  }
+}
