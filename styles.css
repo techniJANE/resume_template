@@ -22,6 +22,15 @@ header {
   align-items: center;
   background-color: whitesmoke;
   border-radius: 0.25rem;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border: 1px groove black;
+  transition: transform 0.3s;
+}
+
+header:hover {
+  transform: scale(1.04);
 }
 
 header ul {
