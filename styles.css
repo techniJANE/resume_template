@@ -103,6 +103,9 @@ section div {
   h1 {
     font-size: 1.5rem;
   }
+  .comma {
+    visibility: hidden;
+  }
   .comma::after {
     content: "\a";
     white-space: pre;
