@@ -33,8 +33,11 @@ header:hover {
   transform: scale(1.06);
 }
 
-header ul {
+ul {
   margin: 0;
+}
+
+header ul {
   padding: 1rem;
   list-style-type: none;
   background-color: black;
@@ -75,7 +78,8 @@ h3 {
   color: white;
   display: grid;
   place-items: center;
-  border-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
   padding: 0.25rem;
   position: absolute;
   top: 0;
