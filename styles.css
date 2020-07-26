@@ -21,16 +21,15 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: white;
-  border-radius: 0.25rem;
   position: sticky;
   top: 0;
   z-index: 2;
-  border: 1px groove black;
+  border: 1px solid black;
   transition: transform 0.3s;
 }
 
 header:hover {
-  transform: scale(1.06);
+  transform: scale(1.08);
 }
 
 ul {
@@ -41,8 +40,6 @@ header ul {
   padding: 1rem;
   list-style-type: none;
   background-color: black;
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
 }
 
 header a {
