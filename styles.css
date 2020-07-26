@@ -20,7 +20,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: whitesmoke;
+  background-color: white;
   border-radius: 0.25rem;
   position: sticky;
   top: 0;
