@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 1rem;
   background-color: aliceblue;
@@ -93,6 +97,27 @@ section div {
   margin: 1rem 0;
   border-radius: 0.25rem;
   position: relative;
+}
+
+a.button {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  border: 0;
+  background-color: dodgerblue;
+  color: white;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  transition: transform 0.3s;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
+}
+
+a.button:hover {
+  transform: scale(1.08);
 }
 
 @media (max-width: 45rem) {
