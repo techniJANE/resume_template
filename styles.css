@@ -136,6 +136,7 @@ a.button:hover {
   .comma {
     visibility: hidden;
   }
+  /* https://css-tricks.com/injecting-line-break/#you-can-insert-line-breaks-via-pseudo-element */
   .comma::after {
     content: "\a";
     white-space: pre;
