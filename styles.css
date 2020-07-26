@@ -77,26 +77,24 @@ h3 {
   font-weight: 400;
 }
 
-.date {
-  font-size: 0.75rem;
-  background-color: dodgerblue;
-  color: white;
-  display: grid;
-  place-items: center;
-  border-top-right-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-  padding: 0.25rem;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
 section div {
   background-color: whitesmoke;
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 0.25rem;
   position: relative;
+}
+
+.date {
+  font-size: 0.75rem;
+  background-color: dodgerblue;
+  color: white;
+  border-top-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  padding: 0.25rem;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 a.button {
