@@ -36,10 +36,14 @@ ul {
   margin: 0;
 }
 
-header ul {
+nav {
   padding: 1rem;
-  list-style-type: none;
   background-color: black;
+}
+
+header ul {
+  padding: 0;
+  list-style-type: none;
 }
 
 header a {
