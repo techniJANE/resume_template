@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1rem;
+  background-color: aliceblue;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  max-width: 60rem;
+  padding: 1rem;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: whitesmoke;
+  border-radius: 0.25rem;
+}
+
+header ul {
+  margin: 0;
+  padding: 1rem;
+  list-style-type: none;
+  background-color: black;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+h1 {
+  margin: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+h3 {
+  margin: 0 0 1rem 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.light {
+  font-weight: 400;
+}
+
+.date {
+  font-size: 0.75rem;
+  background-color: dodgerblue;
+  color: white;
+  display: grid;
+  place-items: center;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+section div {
+  background-color: whitesmoke;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.25rem;
+  position: relative;
+}
+
+@media (max-width: 40rem) {
+  body {
+    margin: 0;
+  }
+  main {
+    box-shadow: none;
+  }
+  [role="img"] {
+    display: none;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .comma::after {
+    content: "\a";
+    white-space: pre;
+  }
+}
