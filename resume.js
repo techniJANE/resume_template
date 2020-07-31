@@ -79,3 +79,24 @@ githubContainer.textContent = `github.com/${data.github}`;
 
 const linkedinContainer = document.querySelector('#linkedin');
 linkedinContainer.textContent = `linkedin.com/in/${data.linekedin}`;
+
+function renderWorkExperience(workExperience){
+  return `
+  <div>
+  <span class="date">${workExperience.dates}</span>
+  <h3>
+    <span role="img" aria-label="hamburger">${workExperience.emoji}</span>
+    ${workExperience.jobTitle}<span class="comma">,</span>
+    <span class="light">${workExperience.institution}</span>
+  </h3>
+  <ul>
+    <li>
+     ${workExperience.details.map(detail => `<li>${detail}</li>.join('')`)}
+  </ul>
+</div>
+  `
+}
+const workExperienceContainer = document.querySelector('#work-experience');
+const eachWorkExperienceHTML = data.workExperience.map(renderWorkExperience);
+const allWorkExperienceHTML = eachWorkExperienceHTML.join('');
+workExperienceContainer.innerHTML = allWorkExperienceHTML;
