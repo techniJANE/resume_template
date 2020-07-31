@@ -8,9 +8,24 @@ const data = {
   email: 'jmeng@rbi.com',
   github: 'techniJANE',
   linekedin: 'jane-lingcong-meng-2a9913b1',
+  headingEmojis: {
+    workExperience: {
+      character: '🦩',
+      arialabel: 'flamingo',
+    },
+    educationalExperience: {
+      character: '🦜',
+      arialabel: 'green bird',
+    },
+    skills: {
+      character: '🦢',
+      arialabel: 'swan',
+    },
+  },
   workExperience: [
     {
       emoji: '🐛',
+      arialabel: 'catapillar',
       jobTitle: 'Analyst, Global Business Services',
       institution: 'Restaurant Brands International',
       dates: '2020 - present', // end with "present" for your current job
@@ -22,6 +37,7 @@ const data = {
     },
     {
       emoji: '🐞',
+      arialabel: 'ladybug',
       jobTitle: 'Analyst, Restaurant Tech',
       institution: 'Restaurant Brands International',
       dates: '2019 - 2020', // end with "present" for your current job
@@ -33,6 +49,7 @@ const data = {
     },
     {
       emoji: '🦋',
+      arialabel: 'butterfly',
       jobTitle: 'Program Advisor, Policy Planning',
       institution: 'Ontario Ministry of Environment',
       dates: '2018 - 2019', // end with "present" for your current job
@@ -46,6 +63,7 @@ const data = {
   educationalExperience: [
     {
       emoji: '🦖',
+      arialabel: 'dinosaur',
       skillsHeading: 'Western University',
       school: 'Department of Economics',
       dates: '2014 - 2019',
@@ -59,6 +77,7 @@ const data = {
   skills: [
     {
       emoji: '🦞',
+      arialabel: 'lobster',
       skillone: 'Languages',
       skilltwo: 'Frameworks',
       dates: '1996 - Present',
@@ -98,6 +117,31 @@ const linkedinContainer = document.querySelector('#linkedin');
 linkedinContainer.textContent += `linkedin.com/in/${data.linekedin}`;
 const linkedin = document.querySelector('li:nth-child(4) a');
 linkedin.href += data.linekedin;
+
+const workExperienceHeading = document.querySelector(
+  "h2:nth-of-type(1) span[role='img']"
+);
+workExperienceHeading.textContent = data.headingEmojis.workExperience.character;
+workExperienceHeading.setAttribute(
+  'arial-label',
+  data.headingEmojis.workExperience.arialabel
+);
+
+const educationExperienceHeading = document.querySelector(
+  "h2:nth-of-type(2) span[role='img']"
+);
+educationExperienceHeading.textContent =
+  data.headingEmojis.educationalExperience.character;
+educationExperienceHeading.setAttribute(
+  'arial-label',
+  data.headingEmojis.educationalExperience.arialabel
+);
+
+const skillsHeading = document.querySelector(
+  "h2:nth-of-type(3) span[role='img']"
+);
+skillsHeading.textContent = data.headingEmojis.skills.character;
+skillsHeading.setAttribute('arial-label', data.headingEmojis.skills.arialabel);
 
 function renderWorkExperience(workExperience) {
   return `
