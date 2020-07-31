@@ -30,7 +30,7 @@ const data = {
         "Managed weekly updates to the Tim Hortons Mobile App and Web Ordering platform",
         "Led quanlity assurance efforts for weekly digital offers launches on the mobile app"
       ]
-    }
+    },
     {
       emoji: "🦋",
       jobTitle: "Program Advisor, Policy Planning",
@@ -45,7 +45,7 @@ const data = {
   ]
   educationalExperience: [
     {
-      emoji: "🧙‍♂️"
+      emoji: "🦖",
       university: "Western University",
       school: "Department of Economics",
       dates: "2014 - 2019",
