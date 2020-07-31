@@ -18,7 +18,7 @@ const data = {
         "Maintain request-intake portal based on current business needs",
         "Manage and audit the department's Excellence Program",
         "Provide recommendations on possible improvements in buciness processes"
-      ]
+      ],
     },
     {
       emoji: "🐞",
@@ -29,7 +29,7 @@ const data = {
         "Coordinated product launches on Point of Sales Systems and Digital Platforms for Tim Hortons North America",
         "Managed weekly updates to the Tim Hortons Mobile App and Web Ordering platform",
         "Led quanlity assurance efforts for weekly digital offers launches on the mobile app"
-      ]
+      ],
     },
     {
       emoji: "🦋",
@@ -40,8 +40,8 @@ const data = {
         "Assisted in the revamp of the Ontario's hazardous waste tracking by building a wireframe for an online reporting system",
         "Evaluated existing environmental programs to ensure appropriate KPIs are in place and assisted with creating new province-wide KPIs",
         "Coordinated with external stakeholders to support the Ontario Open for Business program"
-      ]
-    }
+      ],
+    },
   ]
   educationalExperience: [
     {
@@ -52,9 +52,9 @@ const data = {
       details: [
         "BA (Honors) in Economics",
         "Dean's Honor List"
-      ]
-    }
-  ]
+      ],
+    },
+  ],
 };
 
 document.title = data.name;
@@ -63,8 +63,6 @@ const name = document.querySelector('#name');
 name.textContent = data.name;
 
 const emojiContainer = document.querySelector('h1 span[role="img"]');
-emojiContainer.textContent = data.mainEmoji.character;
-
 emojiContainer.textContent = data.mainEmoji.character;
 emojiContainer.setAttribute('aria-label', data.mainEmoji.arialabel);
 
@@ -75,28 +73,49 @@ const emailContainer = document.querySelector('#email');
 emailContainer.textContent = data.email;
 
 const githubContainer = document.querySelector('#github');
-githubContainer.textContent = `github.com/${data.github}`;
+githubContainer.textContent += `github.com/${data.github}`;
 
 const linkedinContainer = document.querySelector('#linkedin');
-linkedinContainer.textContent = `linkedin.com/in/${data.linekedin}`;
+linkedinContainer.textContent += `linkedin.com/in/${data.linekedin}`;
 
 function renderWorkExperience(workExperience){
   return `
   <div>
   <span class="date">${workExperience.dates}</span>
   <h3>
-    <span role="img" aria-label="hamburger">${workExperience.emoji}</span>
+    <span role="img" aria-label="">${workExperience.emoji}</span>
     ${workExperience.jobTitle}<span class="comma">,</span>
     <span class="light">${workExperience.institution}</span>
   </h3>
   <ul>
-    <li>
      ${workExperience.details.map(detail => `<li>${detail}</li>.join('')`)}
   </ul>
-</div>
-  `
+</div>`;
 }
 const workExperienceContainer = document.querySelector('#work-experience');
 const eachWorkExperienceHTML = data.workExperience.map(renderWorkExperience);
 const allWorkExperienceHTML = eachWorkExperienceHTML.join('');
 workExperienceContainer.innerHTML = allWorkExperienceHTML;
+
+const renderEducationalExperience = educationalExperience => `
+<div>
+  <span class="date">2006 - 2007</span>
+  <h3>
+    <span role="img" aria-label="dinosaur">${educationalExperience.emoji}</span>
+    ${educationalExperience.university}<span class="comma">,</span>
+    <span class="light">${educationalExperience.school}</span>
+  </h3>
+  <ul>
+    ${
+      educationalExperience.details
+      .map(detail => `<li>${detail}</li>`)
+      .join('')}
+  </ul>
+</div>`;
+
+const educationContainer = document.querySelector('#education');
+const eachEducationalExperienceHTML = data.educationalExperience.map(
+  renderEducationalExperience
+);
+const allEducationalExperienceHTML = eachEducationalExperienceHTML.join('');
+educationContainer.innerHTML = allEducationalExperienceHTML;
