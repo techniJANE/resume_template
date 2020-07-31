@@ -10,48 +10,61 @@ const data = {
   linekedin: 'jane-lingcong-meng-2a9913b1',
   workExperience: [
     {
-      emoji: "🐛",
-      jobTitle: "Analyst, Global Business Services",
-      institution: "Restaurant Brands International",
-      dates: "2020 - present", // end with "present" for your current job
+      emoji: '🐛',
+      jobTitle: 'Analyst, Global Business Services',
+      institution: 'Restaurant Brands International',
+      dates: '2020 - present', // end with "present" for your current job
       details: [
-        "Maintain request-intake portal based on current business needs",
+        'Maintain request-intake portal based on current business needs',
         "Manage and audit the department's Excellence Program",
-        "Provide recommendations on possible improvements in buciness processes"
+        'Provide recommendations on possible improvements in buciness processes',
       ],
     },
     {
-      emoji: "🐞",
-      jobTitle: "Analyst, Restaurant Tech",
-      institution: "Restaurant Brands International",
-      dates: "2019 - 2020", // end with "present" for your current job
+      emoji: '🐞',
+      jobTitle: 'Analyst, Restaurant Tech',
+      institution: 'Restaurant Brands International',
+      dates: '2019 - 2020', // end with "present" for your current job
       details: [
-        "Coordinated product launches on Point of Sales Systems and Digital Platforms for Tim Hortons North America",
-        "Managed weekly updates to the Tim Hortons Mobile App and Web Ordering platform",
-        "Led quanlity assurance efforts for weekly digital offers launches on the mobile app"
+        'Coordinated product launches on Point of Sales Systems and Digital Platforms for Tim Hortons North America',
+        'Managed weekly updates to the Tim Hortons Mobile App and Web Ordering platform',
+        'Led quanlity assurance efforts for weekly digital offers launches on the mobile app',
       ],
     },
     {
-      emoji: "🦋",
-      jobTitle: "Program Advisor, Policy Planning",
-      institution: "Ontario Ministry of Environment",
-      dates: "2018 - 2019", // end with "present" for your current job
+      emoji: '🦋',
+      jobTitle: 'Program Advisor, Policy Planning',
+      institution: 'Ontario Ministry of Environment',
+      dates: '2018 - 2019', // end with "present" for your current job
       details: [
         "Assisted in the revamp of the Ontario's hazardous waste tracking by building a wireframe for an online reporting system",
-        "Evaluated existing environmental programs to ensure appropriate KPIs are in place and assisted with creating new province-wide KPIs",
-        "Coordinated with external stakeholders to support the Ontario Open for Business program"
+        'Evaluated existing environmental programs to ensure appropriate KPIs are in place and assisted with creating new province-wide KPIs',
+        'Coordinated with external stakeholders to support the Ontario Open for Business program',
       ],
     },
-  ]
+  ],
   educationalExperience: [
     {
-      emoji: "🦖",
-      university: "Western University",
-      school: "Department of Economics",
-      dates: "2014 - 2019",
+      emoji: '🦖',
+      skillsHeading: 'Western University',
+      school: 'Department of Economics',
+      dates: '2014 - 2019',
       details: [
-        "BA (Honors) in Economics",
-        "Dean's Honor List"
+        "Assisted in the revamp of the Ontario's hazardous waste tracking by building a wireframe for an online reporting system",
+        'Evaluated existing environmental programs to ensure appropriate KPIs are in place and assisted with creating new province-wide KPIs',
+        'Coordinated with external stakeholders to support the Ontario Open for Business program',
+      ],
+    },
+  ],
+  skills: [
+    {
+      emoji: '🦞',
+      skillone: 'Languages',
+      skilltwo: 'Frameworks',
+      dates: '1996 - Present',
+      details: [
+        'Native English, Advanced Mandarin, Conversational French',
+        'HTML, CSS, JavaScript',
       ],
     },
   ],
@@ -78,7 +91,7 @@ githubContainer.textContent += `github.com/${data.github}`;
 const linkedinContainer = document.querySelector('#linkedin');
 linkedinContainer.textContent += `linkedin.com/in/${data.linekedin}`;
 
-function renderWorkExperience(workExperience){
+function renderWorkExperience(workExperience) {
   return `
   <div>
   <span class="date">${workExperience.dates}</span>
@@ -88,7 +101,7 @@ function renderWorkExperience(workExperience){
     <span class="light">${workExperience.institution}</span>
   </h3>
   <ul>
-     ${workExperience.details.map(detail => `<li>${detail}</li>.join('')`)}
+     ${workExperience.details.map(detail => `<li>${detail}</li>`).join('')}
   </ul>
 </div>`;
 }
@@ -106,8 +119,7 @@ const renderEducationalExperience = educationalExperience => `
     <span class="light">${educationalExperience.school}</span>
   </h3>
   <ul>
-    ${
-      educationalExperience.details
+    ${educationalExperience.details
       .map(detail => `<li>${detail}</li>`)
       .join('')}
   </ul>
@@ -119,3 +131,22 @@ const eachEducationalExperienceHTML = data.educationalExperience.map(
 );
 const allEducationalExperienceHTML = eachEducationalExperienceHTML.join('');
 educationContainer.innerHTML = allEducationalExperienceHTML;
+
+const renderSkills = skills => `
+<div>
+  <span class="date">${skills.dates}</span>
+  <h3>
+    <span role="img" aria-label=""> ${skills.emoji}</span>
+    ${skills.skillone}<span className="comma">,</span>
+    <span className="light">${skills.skilltwo}</span>
+  </h3>
+  <ul>
+    ${skills.details.map(detail => `<li>${detail}</li>`).join('')}  
+  </ul>
+</div>
+`;
+
+const skillsContainer = document.querySelector('#skills');
+const eachskillsHTML = data.skills.map(renderSkills);
+const allSkillsHTML = eachskillsHTML.join('');
+skillsContainer.innerHTML = allSkillsHTML;
