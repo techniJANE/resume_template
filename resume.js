@@ -1,8 +1,8 @@
 const data = {
   name: 'Jane Meng',
   mainEmoji: {
-    character: '🐝',
-    arialabel: 'bee',
+    character: '🦙',
+    arialabel: 'llama',
   },
   phoneNumber: '905.808.1286',
   email: 'jmeng@rbi.com',
@@ -14,18 +14,18 @@ const data = {
       arialabel: 'flamingo',
     },
     educationalExperience: {
-      character: '🦜',
-      arialabel: 'green bird',
+      character: '🦥',
+      arialabel: 'sloth',
     },
     skills: {
-      character: '🦢',
-      arialabel: 'swan',
+      character: '🦧',
+      arialabel: 'orangutan',
     },
   },
   workExperience: [
     {
-      emoji: '🐛',
-      arialabel: 'catapillar',
+      emoji: '🌺',
+      arialabel: 'red flower',
       jobTitle: 'Analyst, Global Business Services',
       institution: 'Restaurant Brands International',
       dates: '2020 - present', // end with "present" for your current job
@@ -36,8 +36,8 @@ const data = {
       ],
     },
     {
-      emoji: '🐞',
-      arialabel: 'ladybug',
+      emoji: '🌸',
+      arialabel: 'pink flower',
       jobTitle: 'Analyst, Restaurant Tech',
       institution: 'Restaurant Brands International',
       dates: '2019 - 2020', // end with "present" for your current job
@@ -48,8 +48,8 @@ const data = {
       ],
     },
     {
-      emoji: '🦋',
-      arialabel: 'butterfly',
+      emoji: '🌼',
+      arialabel: 'yellow flower',
       jobTitle: 'Program Advisor, Policy Planning',
       institution: 'Ontario Ministry of Environment',
       dates: '2018 - 2019', // end with "present" for your current job
@@ -62,9 +62,9 @@ const data = {
   ],
   educationalExperience: [
     {
-      emoji: '🦖',
-      arialabel: 'dinosaur',
-      skillsHeading: 'Western University',
+      emoji: '🥥',
+      arialabel: 'coconut',
+      university: 'Western University',
       school: 'Department of Economics',
       dates: '2014 - 2019',
       details: [
@@ -76,8 +76,8 @@ const data = {
   ],
   skills: [
     {
-      emoji: '🦞',
-      arialabel: 'lobster',
+      emoji: '🍁',
+      arialabel: 'red leaf',
       skillone: 'Languages',
       skilltwo: 'Frameworks',
       dates: '1996 - Present',
@@ -164,7 +164,7 @@ workExperienceContainer.innerHTML = allWorkExperienceHTML;
 
 const renderEducationalExperience = educationalExperience => `
 <div>
-  <span class="date">2006 - 2007</span>
+  <span class="date">${educationalExperience.dates}</span>
   <h3>
     <span role="img" aria-label="dinosaur">${educationalExperience.emoji}</span>
     ${educationalExperience.university}<span class="comma">,</span>
