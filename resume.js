@@ -81,15 +81,23 @@ emojiContainer.setAttribute('aria-label', data.mainEmoji.arialabel);
 
 const phoneNumberContainer = document.querySelector('#phone-number');
 phoneNumberContainer.textContent = data.phoneNumber;
+const phoneNumber = document.querySelector('li:nth-child(1) a');
+phoneNumber.href += data.phoneNumber;
 
 const emailContainer = document.querySelector('#email');
 emailContainer.textContent = data.email;
+const email = document.querySelector('li:nth-child(2) a');
+email.href += data.email;
 
 const githubContainer = document.querySelector('#github');
 githubContainer.textContent += `github.com/${data.github}`;
+const github = document.querySelector('li:nth-child(3) a');
+github.href += data.github;
 
 const linkedinContainer = document.querySelector('#linkedin');
 linkedinContainer.textContent += `linkedin.com/in/${data.linekedin}`;
+const linkedin = document.querySelector('li:nth-child(4) a');
+linkedin.href += data.linekedin;
 
 function renderWorkExperience(workExperience) {
   return `
