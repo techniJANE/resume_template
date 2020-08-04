@@ -1,3 +1,18 @@
+function renderWorkExperience(workExperience) {
+  return `
+<div>
+<span class="date">${workExperience.dates}</span>
+<h3>
+  <span role="img" aria-label="">${workExperience.emoji}</span>
+  ${workExperience.jobTitle}<span class="comma">,</span>
+  <span class="light">${workExperience.institution}</span>
+</h3>
+<ul>
+   ${workExperience.details.map(detail => `<li>${detail}</li>`).join('')}
+</ul>
+</div>`;
+}
+
 const fetchData = async () => {
   const response = await fetch('./data.json');
   const data = await response.json();
@@ -95,20 +110,7 @@ const fetchData = async () => {
   </ul>
 </div>
 `;
-  function renderWorkExperience(workExperience) {
-    return `
-  <div>
-  <span class="date">${workExperience.dates}</span>
-  <h3>
-    <span role="img" aria-label="">${workExperience.emoji}</span>
-    ${workExperience.jobTitle}<span class="comma">,</span>
-    <span class="light">${workExperience.institution}</span>
-  </h3>
-  <ul>
-     ${workExperience.details.map(detail => `<li>${detail}</li>`).join('')}
-  </ul>
-</div>`;
-  }
+
   const skillsContainer = document.querySelector('#skills');
   const eachskillsHTML = data.skills.map(renderSkills);
   const allSkillsHTML = eachskillsHTML.join('');
