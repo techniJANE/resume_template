@@ -1,0 +1,90 @@
+{
+  "name": "Jane Meng",
+  "mainEmoji": {
+    "character": "🦙",
+    "arialabel": "llama"
+  },
+  "phoneNumber": "905.808.1286",
+  "email": "jmeng@rbi.com",
+  "github": "techniJANE",
+  "linekedin": "jane-lingcong-meng-2a9913b1",
+  "headingEmojis": {
+    "workExperience": {
+      "character": "🦩",
+      "arialabel": "flamingo"
+    },
+    "educationalExperience": {
+      "character": "🦥",
+      "arialabel": "sloth"
+    },
+    "skills": {
+      "character": "🦧",
+      "arialabel": "orangutan"
+    }
+  },
+  "workExperience": [
+    {
+      "emoji": "🌺",
+      "arialabel": "red flower",
+      "jobTitle": "Analyst, Global Business Services",
+      "institution": "Restaurant Brands International",
+      "dates": "2020 - present",
+      "details": [
+        "Maintain request-intake portal based on current business needs",
+        "Manage and audit the department's Excellence Program",
+        "Provide recommendations on possible improvements in business processes"
+      ]
+    },
+    {
+      "emoji": "🌸",
+      "arialabel": "pink flower",
+      "jobTitle": "Analyst, Restaurant Tech",
+      "institution": "Restaurant Brands International",
+      "dates": "2019 - 2020",
+      "details": [
+        "Coordinated product launches on Point of Sales Systems and Digital Platforms for Tim Hortons North America",
+        "Managed weekly updates to the Tim Hortons Mobile App and Web Ordering platform",
+        "Led quanlity assurance efforts for weekly digital offers launches on the mobile app"
+      ]
+    },
+    {
+      "emoji": "🌼",
+      "arialabel": "yellow flower",
+      "jobTitle": "Program Advisor, Policy Planning",
+      "institution": "Ontario Ministry of Environment",
+      "dates": "2018 - 2019",
+      "details": [
+        "Assisted in the revamp of the Ontario's hazardous waste tracking by building a wireframe for an online reporting system",
+        "Evaluated existing environmental programs to ensure appropriate KPIs are in place and assisted with creating new province-wide KPIs",
+        "Coordinated with external stakeholders to support the Ontario Open for Business program"
+      ]
+    }
+  ],
+  "educationalExperience": [
+    {
+      "emoji": "🥥",
+      "arialabel": "coconut",
+      "university": "Western University",
+      "school": "Department of Economics",
+      "dates": "2014 - 2019",
+      "details": [
+        "Assisted in the revamp of the Ontario's hazardous waste tracking by building a wireframe for an online reporting system",
+        "Evaluated existing environmental programs to ensure appropriate KPIs are in place and assisted with creating new province-wide KPIs",
+        "Coordinated with external stakeholders to support the Ontario Open for Business program"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "emoji": "🍁",
+      "arialabel": "red leaf",
+      "skillone": "Languages",
+      "skilltwo": "Frameworks",
+      "dates": "1996 - Present",
+      "details": [
+        "Native English, Advanced Mandarin, Conversational French",
+        "HTML, CSS, JavaScript"
+      ]
+    }
+  ]
+}
